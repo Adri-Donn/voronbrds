@@ -82,7 +82,7 @@
 ## Installation
 
 ### Prerequisites II
-> Not needed if you are using [VoronNUC](https://github.com/Adri-Donn/partagevoron/-/tree/master/Mods/VoronNUC)
+> Not needed if you are using [VoronNUC](https://gitlab.black-rider-studio.eu/Adri/partagevoron/-/tree/master/Mods/VoronNUC)
 Follow this [tutorial](https://www.klipper3d.org/RPi_microcontroller.html) in order to activate the PI as an MCU and retrieve information from it
 
 ### Preparing the Raspberry Pi
@@ -171,7 +171,7 @@ END_PRINT
 [Mainsail documentation](https://github.com/emtrax-ltd/Cura2MoonrakerPlugin)
 
 ## Documentation
-- [Other documentation like pinout](https://github.com/Adri-Donn/partagevoron)
+- [Other documentation like pinout](https://gitlab.black-rider-studio.eu/Adri/partagevoron)
 
 ## Example files
 | File name and link to example                                                                             | When you need it   |
