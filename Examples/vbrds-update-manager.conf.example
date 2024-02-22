@@ -1,0 +1,51 @@
+#####################################################################
+#	VBRDS helper for Update Manager
+#####################################################################
+# This file is located in : 
+# Replace {$USER} by your username (most of the time it is "pi")
+#   /home/{$USER}/printer_data/config/vbrds-update-manager.conf
+#####################################################################
+# This files helps you to enable / disable updates for extensions in moonraker easily.
+# 
+# To enable an extension update, simply uncomment.
+# To disable an extension update, simply uncomment.
+#####################################################################
+# CanBoot
+#[include ../../voronbrds/Moonraker/UpdateManager/CanBoot.conf]
+
+#----------------------------------------------------------------
+
+# Kiauh
+[include ../../voronbrds/Moonraker/UpdateManager/Kiauh.conf]
+
+#----------------------------------------------------------------
+
+# Klicky-Probe
+#[include ../../voronbrds/Moonraker/UpdateManager/Klicky-Probe.conf]
+
+#----------------------------------------------------------------
+
+# Klipper-Z-Calibration
+#[include ../../voronbrds/Moonraker/UpdateManager/Klipper-Z-Calibration.conf]
+
+#----------------------------------------------------------------
+
+# PrettyGCode
+[include ../../voronbrds/Moonraker/UpdateManager/PrettyGCode.conf]
+
+#----------------------------------------------------------------
+
+# Crowsnest
+#[include ../../voronbrds/Moonraker/UpdateManager/Crowsnest.conf]
+
+#----------------------------------------------------------------
+
+# Sonar
+#[include ../../voronbrds/Moonraker/UpdateManager/Sonar.conf]
+
+#----------------------------------------------------------------
+
+# Moonraker-Timelapse
+#[include ../../voronbrds/Moonraker/UpdateManager/Moonraker-Timelapse.conf]
+
+#####################################################################

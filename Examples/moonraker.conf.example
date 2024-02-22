@@ -1,0 +1,66 @@
+#####################################################################
+# This file is located in : 
+# Replace {$USER} by your username (most of the time it is "pi")
+#   /home/{$USER}/printer_data/config/moonraker.conf
+#####################################################################
+[server]
+host: 0.0.0.0
+#  The host address in which to bind the HTTP server.  Default is to bind
+#  to all ipv4 interfaces.  If set to "all" the server will bind to all
+#  ipv4 an ipv6 interfaces.
+port: 7125
+#   The port the HTTP server will listen on.  Default is 7125
+ssl_port: 7130
+#   The port to listen on for SSL (HTTPS) connections.  Note that the HTTPS
+#   server will only be started of the certificate and key options outlined
+#   below are provided.  The default is 7130.
+klippy_uds_address: ~/printer_data/comms/klippy.sock
+#   The address of Unix Domain Socket used to communicate with Klippy. Default
+#   is /tmp/klippy_uds
+max_upload_size: 1024
+#   The maximum size allowed for a file upload (in MiB).  Default is 1024 MiB.
+
+# Include Voron-BRDS config
+[include ../../voronbrds/Moonraker/base.conf]  # From printer_data/config
+
+# Include vbrds update manager
+[include vbrds-update-manager.conf]
+
+[file_manager]
+# post processing for object cancel. Not recommended for low resource SBCs such as a Pi Zero. Default False
+enable_object_processing: False
+
+[authorization]
+cors_domains:
+    https://my.mainsail.xyz
+    http://my.mainsail.xyz
+    http://*.local
+    http://*.lan
+    *:7136  #<--Allow PrettyGCode (port 7136) on all domains (recommended) OR...
+    *.local:7136  #<--Allow PrettyGCode (port 7136) on just .*local domain. (more secure I guess)
+trusted_clients:
+    10.0.0.0/8
+    127.0.0.0/8
+    169.254.0.0/16
+    172.16.0.0/12
+    192.168.0.0/16
+    FE80::/10
+    ::1/128
+
+# enables partial support of Octoprint API
+[octoprint_compat]
+
+# enables moonraker to track and store print history.
+[history]
+
+# this enables moonraker announcements for mainsail
+[announcements]
+subscriptions:
+    mainsail
+
+# this enables moonraker's update manager
+[update_manager]
+refresh_interval: 168
+enable_auto_refresh: True
+
+[include mainsail-moonraker-update.conf]

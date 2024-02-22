@@ -1,0 +1,13 @@
+#####################################################################
+#   CanBUS Network
+#####################################################################
+# This file is located in : /etc/network/interfaces.d/can0
+#####################################################################
+allow-hotplug can0
+iface can0 can static
+ bitrate 500000
+ up ifconfig $IFACE txqueuelen 512
+ pre-up ip link set can0 type can bitrate 500000
+ pre-up ip link set can0 txqueuelen 512
+
+ #####################################################################
