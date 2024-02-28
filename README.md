@@ -122,6 +122,9 @@ We just have to add the following code block at the end of the "printer.cfg" fil
 [include ./voron-brds-variables.cfg]
 ```
 
+### Patch klipper
+ln -sf ~/voronbrds/klipper/Extras/mesh_print_size.py ~/klipper/klippy/extras/mesh_print_size.py" 
+
 ### Adapt the print start sequence in your slicer
 
 Cura:
