@@ -94,13 +94,18 @@ git clone https://github.com/Adri-Donn/voronbrds.git
 ```
 
 ### Prepare the configuration file
-In the terminal, execute the following command to copy the configuration file to the right place :
+In the terminal, execute the following command to copy the configuration file to the right place. You need to change the source file corresponding to your base config.
 
 ```
-cp ~/voronbrds/voron-brds-variables.cfg ~/printer_data/config/voron-brds-variables.cfg
+cp ~/voronbrds/Examples/voron-brds-variables.cfg ~/printer_data/config/voron-brds-variables.cfg
 ```
 
 You can then open this file, adapt it to your needs and finally save it.
+
+### Prepare the update manager configuration file
+```
+cp ~/voronbrds/Examples/vbrds-update-manager.conf.example ~/printer_data/config/vbrds-update-manager.conf
+```
 
 ### Install the wrapper in moonraker
 This allows to update the voronbrds extension via the web interface.
